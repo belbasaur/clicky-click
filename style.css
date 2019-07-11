@@ -99,4 +99,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
   }
+  .result img {
+    width: unset;
+  }
 }
