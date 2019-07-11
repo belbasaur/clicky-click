@@ -8,7 +8,7 @@
   background: #30a4da;
   color: #ffffff;
   font-family: sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
   text-align: center;
   transition: background 250ms ease-in-out, 
@@ -16,7 +16,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
 
-  border-radius: 33px;
+  border-radius: 27px;
   width: fit-content;
 }
 
@@ -37,8 +37,8 @@
 
 /* ----------------------------------------- */
 .blocks {
-  display: flex;
-  height: 100%;
+  /* display: flex; */
+  height: 50%;
 }
 
 .block--button {
@@ -46,7 +46,7 @@
 }
 
 .block--img {
-  width: 30%;
+  width: 100%;
   display: none;
 }
 
@@ -67,13 +67,16 @@
   height: 100%;
 }
 
-.clicky,
-.image,
-.result img {
+.clicky {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.result img {
+  width: 100%;
+  display: block;
 }
 
 .result {
@@ -81,8 +84,19 @@
 }
 
 @media (min-width: 480px) {
-  .clicky {
-    font-size: 1rem;
-    border-radius: 27px;
+  .blocks {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+  }
+  .block--img {
+    width: 30%;
+  }
+  .image,
+  .result img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }

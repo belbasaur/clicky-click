@@ -17,6 +17,9 @@ function initClicky() {
   const block_img = document.querySelector(
     '.block--img'
   );
+  const blocks = document.querySelector(
+    '.blocks'
+  );
   let count = 0,
     x = 0,
     y = 0;
@@ -31,8 +34,11 @@ function initClicky() {
     switch (count) {
       case 0:
         button.innerHTML = "What's in my belly?";
-        block_button.setAttribute("style", "width: 70%");
         block_img.setAttribute("style", "display: block");
+        let mql = window.matchMedia('(max-width: 480px)');
+        if(!mql.matches) {
+          block_button.setAttribute("style", "width: 70%");
+        }
         break;
       case 1:
         button.innerHTML = "It's not a burrito";
@@ -74,11 +80,16 @@ function initClicky() {
         button.innerHTML = "His or her toes?";
         image.setAttribute("src", "images/sono.jpg");
         break;
+      case 11:
+        button.innerHTML = "It's a...";
+        image.setAttribute("src", "images/sono.jpg");
+        break;
       default:
         result.setAttribute("style", "display: block;");
-        marquee.setAttribute("style", "display: block;");
+        // marquee.setAttribute("style", "display: block;");
         button.setAttribute("style", "display: none;");
         image.setAttribute("style", "display: none;");
+        blocks.setAttribute("style", "display: none;");
     }
 
     count++;
