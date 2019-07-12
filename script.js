@@ -54,7 +54,7 @@ function initClicky() {
         break;
       case 4:
         button.innerHTML = "When is it due?";
-        image.setAttribute("src", "https://media.giphy.com/media/xTk9ZzD6NuYrMuDBx6/giphy.gif");
+        image.setAttribute("src", "https://media.giphy.com/media/Ncvnm4gojLuo/giphy.gif");
         break;
       case 5:
         button.innerHTML = "Is it a boy or a girl?";
@@ -65,7 +65,7 @@ function initClicky() {
         image.setAttribute("src", "https://media.giphy.com/media/UDszxjha8hXHO/giphy.gif");
         break;
       case 7:
-        button.innerHTML = "Sir or Madam?";
+        button.innerHTML = "He or She?";
         image.setAttribute("src", "https://media.giphy.com/media/uvQgpEBytkLte/giphy.gif");
         break;
       case 8:
