@@ -5,7 +5,7 @@ function initClicky() {
   const button = document.querySelector(
     '.clicky'
   );
-  const image = document.querySelector(
+  const images = document.querySelectorAll(
     '.image'
   );
   const result = document.querySelector(
@@ -29,7 +29,6 @@ function initClicky() {
     y = Math.floor(Math.random() * 100);
     
     button.setAttribute("style", "left: "+x+"%; top: "+y+"%; transform: translate(-"+x+"%, -"+y+"%);");
-    image.setAttribute("style", "display: block;");
 
     switch (count) {
       case 0:
@@ -40,61 +39,66 @@ function initClicky() {
           block_button.setAttribute("style", "width: 70%");
         }
         break;
+
       case 1:
         button.innerHTML = "It's not a burrito";
-        image.setAttribute("src", "https://media.giphy.com/media/4FrI84rhWCFSU/giphy.gif");
+        hideOldShowNew(1);
         break;
       case 2:
         button.innerHTML = "It's not a piece of cake";
-        image.setAttribute("src", "https://media.giphy.com/media/l3vRmLrL8MfD9CIkU/giphy.gif");
+        hideOldShowNew(2);
         break;
       case 3:
         button.innerHTML = "It's a baby!";
-        image.setAttribute("src", "https://media.giphy.com/media/4xpB3eE00FfBm/giphy.gif");
+        hideOldShowNew(3);
         break;
       case 4:
         button.innerHTML = "When is it due?";
-        image.setAttribute("src", "https://media.giphy.com/media/Ncvnm4gojLuo/giphy.gif");
+        hideOldShowNew(4);
         break;
       case 5:
         button.innerHTML = "Is it a boy or a girl?";
-        image.setAttribute("src", "https://media.giphy.com/media/26ufm2tI0ODxTeRr2/giphy.gif");
+        hideOldShowNew(5);
         break;
       case 6:
         button.innerHTML = "Phoebe or Phoebo?";
-        image.setAttribute("src", "https://media.giphy.com/media/UDszxjha8hXHO/giphy.gif");
+        hideOldShowNew(6);
         break;
       case 7:
         button.innerHTML = "He or She?";
-        image.setAttribute("src", "https://media.giphy.com/media/uvQgpEBytkLte/giphy.gif");
+        hideOldShowNew(7);
         break;
       case 8:
         button.innerHTML = "Keep going!";
-        image.setAttribute("src", "https://media.giphy.com/media/lfCTKCg4sw8rm/giphy.gif");
+        hideOldShowNew(8);
         break;
       case 9:
         button.innerHTML = "His or her arm?";
-        image.setAttribute("src", "images/arm.jpg");
+        hideOldShowNew(9);
         break;
       case 10:
         button.innerHTML = "His or her toes?";
-        image.setAttribute("src", "images/sono.jpg");
+        hideOldShowNew(10);
         break;
       case 11:
         button.innerHTML = "It's a...";
-        image.setAttribute("src", "images/sono.jpg");
+        images[10].classList.add('hide');
         break;
       default:
-        result.setAttribute("style", "display: block;");
-        // marquee.setAttribute("style", "display: block;");
-        button.setAttribute("style", "display: none;");
-        image.setAttribute("style", "display: none;");
-        blocks.setAttribute("style", "display: none;");
+        result.classList.add('show');
+        button.classList.add('hide');
+        blocks.classList.add('hide');
     }
 
     count++;
 
   });
+
+  function hideOldShowNew(caseVar) {
+    images[caseVar-1].classList.add('hide');
+    images[caseVar].classList.remove('hide');
+    images[caseVar].classList.add('show');
+  }
 
 }
 

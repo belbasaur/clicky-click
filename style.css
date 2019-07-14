@@ -103,3 +103,11 @@
     width: unset;
   }
 }
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
