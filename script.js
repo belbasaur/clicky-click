@@ -29,7 +29,6 @@ function initClicky() {
     y = Math.floor(Math.random() * 100);
     
     button.setAttribute("style", "left: "+x+"%; top: "+y+"%; transform: translate(-"+x+"%, -"+y+"%);");
-
     switch (count) {
       case 0:
         button.innerHTML = "What's in my belly?";
@@ -61,7 +60,7 @@ function initClicky() {
         hideOldShowNew(5);
         break;
       case 6:
-        button.innerHTML = "Phoebe or Phoebo?";
+        button.innerHTML = "Brother or Sister?";
         hideOldShowNew(6);
         break;
       case 7:
@@ -69,20 +68,12 @@ function initClicky() {
         hideOldShowNew(7);
         break;
       case 8:
-        button.innerHTML = "Keep going!";
+        button.innerHTML = "Pink or Blue?";
         hideOldShowNew(8);
         break;
       case 9:
-        button.innerHTML = "His or her arm?";
-        hideOldShowNew(9);
-        break;
-      case 10:
-        button.innerHTML = "His or her toes?";
-        hideOldShowNew(10);
-        break;
-      case 11:
         button.innerHTML = "It's a...";
-        images[10].classList.add('hide');
+        images[8].classList.add('hide');
         break;
       default:
         result.classList.add('show');
@@ -91,6 +82,7 @@ function initClicky() {
     }
 
     count++;
+
 
   });
 
